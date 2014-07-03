@@ -1,0 +1,62 @@
+﻿@model System.Collections.Generic.IEnumerable<my_project.Models.collection>
+
+
+<div class="top"></div>
+<div class="wrapper">
+	<div class="logo"><div class="logo_text"><h1>Our</h1><h2>Memories</h2></div></div>
+	<div class="nav fl">			
+			<ul>			
+			<li><a href="../Home/home" >Home</a></li>			
+                <li><a href="../user/mainpage" >View_All</a></li>			                
+                <li><a href="../user/create" >Add New</a></li>			                
+			</ul>			
+		</div>		    
+		<div class="clear"></div>
+		<div class="page_title"><h6>Searched Blog</h6></div>
+	
+	<div class="des"><h2>Memory is a child walking along a seashore.  You never can tell what small pebble it will pick up and store away among its treasured things.  ~Pierce Harris, Atlanta Journal</h2></div>
+	
+	<div class="special_sep"></div>
+	
+	
+	<div class="section1">
+				<div class="section_right fl">
+                    @foreach(var s in Model)
+                     {
+                        <div class="blog">				    
+				        <div class="b_title fl"><h6>@s.topic </h6></div>				
+				        <div class="sep2"></div>
+				        <div class="b_image"><img src="@s.source" alt="blog"  /></div>
+				        <div class="b_description fl"><p>@s.description</p>								
+				        </div>
+                            </div>					
+		        }																								
+			<div class="clear"></div>
+			
+		</div>
+        </div>
+    </div>
+					
+                
+                
+<br /><br /><br /><br /><br /><br /><br /><br />					
+<div class="posted-by" style=  "color:darkred"  >Powered By: TECHNORATES </div>			
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+        *   Examples - images
+        */
+
+        $("a#example1").fancybox();
+
+        $("a#example2").fancybox({
+            'overlayShow': false,
+            'transitionIn': 'elastic',
+            'transitionOut': 'elastic'
+        });
+
+        $("a[rel=example_group]").fancybox({
+            'transitionIn': 'none',
+            'transitionOut': 'none',
+            'titlePosition': 'over',
+            'titleFormat': function (title, currentArray, currentIndex, currentOpts) {

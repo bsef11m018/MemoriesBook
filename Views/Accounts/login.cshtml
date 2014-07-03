@@ -25,13 +25,13 @@
             <div class="wrap">
                 <p class="form-title">
                     Sign In</p>
-                <form class="login" action="~/Home/Index" method="post">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
+                <form class="login" action="~/Accounts/LoginUser" method="post">
+                <input type="text" name="name" placeholder="Username" />
+                <input type="password" name="password" placeholder="Password" />
                 <input type="submit" value="Sign In" class="btn btn-success btn-sm" />                                
                 </form>
                 <br />
-                 <form accept-charset="UTF-8" action="~/Home/signup" method="post">
+                 <form accept-charset="UTF-8" action="~/Accounts/signup" method="post">
                                    <button class="btn btn-warning" type="submit">Sign up </button>
                 </form>
             </div>

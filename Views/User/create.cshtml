@@ -1,14 +1,12 @@
-﻿@model my_project.Models.memory
+@model my_project.Models.memory
 <h2>create</h2>
 <div class="top"></div>
 <div class="wrapper">
 	<div class="logo"><div class="logo_text"><h1>Our</h1><h2>Memories</h2></div></div>
 	<div class="nav fl">
-			<ul>
-			<li class="selected"><a href="index.html" >Home</a></li>
-			<li>@Html.ActionLink("Home","Index","Home")</li>
-            <li>@Html.ActionLink("about_us","about_us", "Home")</li>
-            <li>@Html.ActionLink("View All","viewAll", "user")</li>			
+			<ul>			
+			<li>@Html.ActionLink("Home","Index","Home")</li>            
+            <li>@Html.ActionLink("View All","mainpage", "user")</li>			
 			</ul>
 		</div>
 		<div class="clear"></div>            
@@ -18,10 +16,11 @@
 		<div class="clear"></div>				
 	<!--<div class="special_sep"></div>	-->	
 	 <div class="columnRight" style="padding-left: 40px">
-    <!--Form------------------------------------------------------------------->   
+    <!--Form-------------------------------------------------------------------
          @using (Html.BeginForm("saveText", "user", FormMethod.Post))
          {
          }
+        -->
             <div class ="selected" size="30" ><h6> Start Saving your Memories </h6> </div>						                			               
              <div style="margin:0;padding:0;display:inline"></div>
              <!--Html.TextArea("t1", new { rows = "5", columns = "30", placeholder = "Start Writing your Memories" }); -->
@@ -44,9 +43,10 @@
            -->
          <form action="../user/saveData" method="post" enctype="multipart/form-data" >
              <!-- Html.Label("Add an Image",new{label="Add an image",});             -->
-             <input type="text" id="text1" name="topic" placeholder="Write Title " style="background-color:burlywood" /> 
+             <input type="text" id="text1" name="topic" placeholder="Write Title " style="background-color:orange" /> 
              <br />
-             <textarea id="t1" rows="4" cols="100"  name="description" placeholder="Start Writing Your Memories" style="background-color:ActiveBorder"></textarea> 
+             <input type="text" id="text2" size="160" name="description" placeholder="Write Description here " style="background-color:orange" /> 
+             <!--<textarea id="t1" rows="4" cols="100"  name="description" placeholder="Start Writing Your Memories" style="background-color:ActiveBorder"></textarea>  -->
              <br />
              <br />
              <label style="font-size:medium"> Upload An Image</label><br />                          
@@ -56,7 +56,6 @@
 
              </script>
          </form>
-	 </div>
-    </div>
+	 </div>    
     
                   
